@@ -4,7 +4,7 @@
   "description": "Custom Employee Portal with Role-Based Access Control and Zoho One API Integration",
   "scripts": {
     "install:all": "npm --prefix backend install && npm --prefix frontend install",
-    "build": "npm --prefix frontend install && npm --prefix frontend run build && npm --prefix backend install",
+    "build": "npm --prefix frontend install --include=dev && npm --prefix frontend run build && npm --prefix backend install",
     "seed": "npm --prefix backend run seed",
     "test": "npm --prefix backend test",
     "start": "node backend/src/seeders/seed.js && node backend/server.js",
