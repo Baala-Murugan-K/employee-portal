@@ -4,8 +4,10 @@
   "description": "Custom Employee Portal with Role-Based Access Control and Zoho One API Integration",
   "scripts": {
     "install:all": "npm --prefix backend install && npm --prefix frontend install",
+    "build": "npm --prefix frontend install && npm --prefix frontend run build && npm --prefix backend install",
     "seed": "npm --prefix backend run seed",
     "test": "npm --prefix backend test",
+    "start": "node backend/src/seeders/seed.js && node backend/server.js",
     "backend": "npm --prefix backend start",
     "frontend": "npm --prefix frontend run dev",
     "dev": "node -e \"const { spawn } = require('child_process'); const b = spawn('npm', ['--prefix', 'backend', 'start'], { stdio: 'inherit', shell: true }); const f = spawn('npm', ['--prefix', 'frontend', 'run', 'dev'], { stdio: 'inherit', shell: true });\""

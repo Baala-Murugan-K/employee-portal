@@ -59,6 +59,21 @@ app.get('/api/health', (req, res) => {
   });
 });
 
+// Serve frontend static assets if built
+const path = require('path');
+const fs = require('fs');
+const frontendDist = path.resolve(__dirname, '../frontend/dist');
+
+if (fs.existsSync(frontendDist)) {
+  app.use(express.static(frontendDist));
+  app.get('*', (req, res, next) => {
+    if (req.path.startsWith('/api')) {
+      return next();
+    }
+    res.sendFile(path.join(frontendDist, 'index.html'));
+  });
+}
+
 // Centralized error handler
 app.use(errorHandler);
 
