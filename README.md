@@ -218,8 +218,3 @@ The database strictly complies with the BrainWave schema specification:
 - `GET /api/roles`: List all system roles and permissions matrix.
 
 ---
-
-## 🎥 Video Presentation Script
-
-A ready-to-read, 3-to-5 minute video narration script specifically structured for the submission evaluation criteria is provided in:
-👉 [`VIDEO_DEMO_SCRIPT.md`](./VIDEO_DEMO_SCRIPT.md)
