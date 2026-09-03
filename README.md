@@ -1,5 +1,11 @@
 # 🏢 Custom Employee Portal with Zoho One Integration & RBAC
 
+[![Live Demo](https://img.shields.io/badge/Live%20Demo-Active%20Online-success?style=for-the-badge&logo=render)](https://employee-portal-pnbq.onrender.com)
+[![System Status](https://img.shields.io/badge/System%20Status-Operational-brightgreen?style=for-the-badge)](https://employee-portal-pnbq.onrender.com)
+[![RBAC](https://img.shields.io/badge/RBAC-Enforced-blue?style=for-the-badge)](https://employee-portal-pnbq.onrender.com)
+
+> 🌐 **Live Published Portal**: **[https://employee-portal-pnbq.onrender.com](https://employee-portal-pnbq.onrender.com)**  
+> 
 > A web-based enterprise employee portal featuring built-in authentication, fine-grained Role-Based Access Control (RBAC), and secure backend integration with Zoho One APIs. Employees never need individual Zoho credentials; all Zoho OAuth operations are handled by a single backend service account.
 
 ---
