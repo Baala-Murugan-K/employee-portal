@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
+import { useParams, useNavigate, useLocation } from 'react-router-dom';
 import { zohoService } from '../services/zohoService';
 import { 
   Users, 
@@ -60,8 +60,12 @@ const serviceConfig = {
   }
 };
 
-export default function ZohoProxyView() {
-  const { service } = useParams();
+export default function ZohoProxyView({ service: propService }) {
+  const { service: paramService } = useParams();
+  const location = useLocation();
+  const pathParts = location.pathname.split('/').filter(Boolean);
+  const pathService = pathParts[pathParts.length - 1]; // e.g. 'people', 'crm', 'desk', 'books'
+  const service = propService || paramService || pathService;
   const navigate = useNavigate();
   const config = serviceConfig[service];
 

@@ -46,7 +46,7 @@ export default function App() {
               path="/zoho/people" 
               element={
                 <ProtectedRoute allowedRoles={['Admin', 'HR', 'Manager']}>
-                  <ZohoProxyView />
+                  <ZohoProxyView service="people" />
                 </ProtectedRoute>
               } 
             />
@@ -54,7 +54,7 @@ export default function App() {
               path="/zoho/crm" 
               element={
                 <ProtectedRoute allowedRoles={['Admin', 'Sales', 'Manager']}>
-                  <ZohoProxyView />
+                  <ZohoProxyView service="crm" />
                 </ProtectedRoute>
               } 
             />
@@ -62,7 +62,7 @@ export default function App() {
               path="/zoho/desk" 
               element={
                 <ProtectedRoute allowedRoles={['Admin', 'Support']}>
-                  <ZohoProxyView />
+                  <ZohoProxyView service="desk" />
                 </ProtectedRoute>
               } 
             />
@@ -70,7 +70,7 @@ export default function App() {
               path="/zoho/books" 
               element={
                 <ProtectedRoute allowedRoles={['Admin', 'Finance']}>
-                  <ZohoProxyView />
+                  <ZohoProxyView service="books" />
                 </ProtectedRoute>
               } 
             />
